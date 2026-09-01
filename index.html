@@ -741,19 +741,6 @@ Their incentive fee calculations had grown complex enough to be a real operation
     <div class="footer-logo">Anne Wahl <span>CFA</span></div>
     <div class="footer-copy">&copy; 2026 Anne Wahl. All rights reserved.</div>
   </footer>
-
-const navToggle = document.getElementById('nav-toggle');
-const navLinks = document.querySelector('.nav-links');
-navToggle.addEventListener('click', () => {
-  const open = navLinks.classList.toggle('open');
-  navToggle.classList.toggle('open', open);
-  navToggle.setAttribute('aria-expanded', open);
-});
-navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  navLinks.classList.remove('open');
-  navToggle.classList.remove('open');
-  navToggle.setAttribute('aria-expanded', 'false');
-}));
   <script>
     // Enable JS animations
     document.documentElement.classList.add('js-ready');
