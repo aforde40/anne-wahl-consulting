@@ -420,7 +420,20 @@
     /* ─────────────────── RESPONSIVE ─────────────────── */
     @media (max-width: 960px) {
       nav { padding: 1.25rem 2rem; }
-      nav .nav-links { display: none; }
+            .nav-toggle { display: flex; }
+      nav .nav-links {
+        position: fixed; top: 0; left: 0; right: 0;
+        background: var(--warm-white);
+        flex-direction: column; align-items: center; gap: 0;
+        padding: 5rem 0 2rem;
+        border-bottom: 1px solid var(--rule);
+        transform: translateY(-100%);
+        transition: transform 0.35s ease;
+        z-index: -1;
+      }
+      nav .nav-links.open { transform: translateY(0); }
+      nav .nav-links li { width: 100%; text-align: center; }
+      nav .nav-links a { display: block; padding: 1rem 0; font-size: 0.8rem; }
       section { padding: 5rem 2rem; }
       #hero { grid-template-columns: 1fr; padding: 8rem 2rem 4rem; align-items: start; }
       .hero-right { align-items: flex-start; margin-top: 3rem; }
